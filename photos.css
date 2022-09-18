@@ -1,0 +1,60 @@
+body {
+    text-align: center;
+    margin: 0px 2em;
+    font-family: arial;
+    background-color: black;
+}
+
+h1 {
+    color: #efefef;
+    text-decoration-line: underline;
+    font-style: italic;
+}
+
+input {
+    display: none;
+}
+
+.tag {
+    font-size: 20px;
+    margin: 1.5em 0px;
+    padding: 5px 25px;
+    border-radius: 50px;
+    display: inline-block;
+    cursor: pointer;
+    background: #efefef;
+    text-decoration: none;
+    color: black;
+    border: 1px solid #ccc;
+    box-shadow: rgb(38, 231, 238);
+}
+
+.tag :hover {
+    background-color: red;
+    box-shadow: 0em;
+}
+
+img {
+    max-width: 300px;
+    width: 300px;
+    height: 300px;
+    transition: all .4s ease-in-out;
+}
+
+
+/*filter CSS */
+
+#fort:checked~.images>img:not([class*='fort']),
+#flower:checked~.images>img:not([class*='flower']),
+#nature:checked~.images>img:not([class*='nature']) {
+    width: 0px;
+    height: 0px;
+}
+
+#all:checked~.all,
+#fort:checked~.tag1,
+#flower:checked~.tag2,
+#nature:checked~.tag3 {
+    background-color: light rgb(120, 247, 23);
+    color: black;
+}
